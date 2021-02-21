@@ -5,14 +5,13 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Signup from './components/Signup'
 
-
 import { toast, ToastContainer } from 'react-toastify'
 import { useCookies } from 'react-cookie'
 
 import jwt from 'jwt-decode'
 
-import 'react-toastify/dist/ReactToastify.css';
-import 'react-bootstrap-typeahead/css/Typeahead.css';
+import 'react-toastify/dist/ReactToastify.css'
+import 'react-bootstrap-typeahead/css/Typeahead.css'
 
 import './site.css'
 
@@ -45,11 +44,10 @@ const App = () => {
         )} />
     )
 
-
 	return(
 		<React.Fragment>
 			<Layout>
-				<Route exact path='/' component={Home} />
+				<PrivateRoute exact path='/' component={Home} />
 				<Route path='/login' component={Login} />
 				<Route path='/signup' component={Signup} />
 								

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
 
-import Form from 'react-bootstrap/Form';
+import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Image from 'react-bootstrap/Image'
 
@@ -10,7 +10,6 @@ import { faSignInAlt } from '@fortawesome/free-solid-svg-icons/faSignInAlt'
 
 import { toast } from 'react-toastify'
 import axios from 'axios'
-import jwt_decode from 'jwt-decode'
 import { useCookies } from 'react-cookie'
 
 import './styles/login.css'
@@ -34,12 +33,9 @@ const Login = () => {
 		} else {			
 			event.preventDefault();
 			
-			axios.get(Constants.APIRoot + 'user/login?username=' + usernameFieldValue + "&password=" + passwordFieldValue)
+			axios.get(Constants.APIRoot + 'user/login?username=' + usernameFieldValue + '&password=' + passwordFieldValue)
 			.then(function(response) {
 				setCookie('stockroom-token', response.data.token);
-
-				// var token = jwt_decode(response.data.token);
-				// console.log(token);
 
 				history.push('/');
 			})
@@ -65,7 +61,7 @@ const Login = () => {
 					<Form.Group>
 						<Form.Label>Username</Form.Label>
 						<Form.Control
-							type="text"
+							type="text"	
 							placeholder={'red.raider'}
 							value={usernameFieldValue}
 							onChange={handleUsernameChange}
