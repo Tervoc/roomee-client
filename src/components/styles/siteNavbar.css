@@ -1,0 +1,95 @@
+ /* Author(s): Jackson, Darrel (Darrel.Jackson@ttu.edu)
+ Date Created: 03/18/2021
+ Notes: N/A */
+ :root {
+    --navbar-background: #36393F;
+}
+
+.page {
+    margin: 0;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar { 
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: var(--navbar-background);
+    color: #FFFFFF;
+}
+
+.page-content {
+    padding: 0 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.navbar-items {
+    position: absolute;
+    min-width: 100%;
+    padding-left: 0%;
+}
+
+.nav-item > .dropdown-menu {
+    background: var(--navbar-background);
+    border: 1px solid #FFFFFF;
+    padding: 0;
+}
+
+.navbar-footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    width: 100%;
+}
+
+.navbar-footer-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-link, .dropdown-item {
+    color: #FFFFFF;
+    background: var(--navbar-background);
+    transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link:focus, .dropdown-item:hover, .dropdown-item:focus {
+    background:#7289DA;
+    text-decoration: none;
+    color: #FFFFFF;
+} 
+
+.nav-items {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.nav-box {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-button {
+    transition: 0.3s all;
+}
+
+.navbar-button:hover, .navbar-button:focus {
+    color: #7289DA;
+    cursor: pointer;
+}
+
+.change {
+    color:#000000;
+    background-color: #44DDBF; 
+}
