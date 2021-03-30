@@ -1,11 +1,15 @@
 import React from 'react'
 import Announcement from './Announcement'
-
+import Event from './Event'
+import Button from 'react-bootstrap/Button'
 const Home = () => {
 	return (
 		<div>
+{/* Position it, automatically resize, make a pop up to enter event info */}
+
 			<h2>Announcements</h2>
 			
+			<Button variant="primary">Create</Button>{' '}
 			<Announcement
 				title="Example Announcement 1"
 				text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a viverra velit, vel porttitor mauris. Nulla volutpat varius turpis quis dictum. Nullam massa enim, mattis at justo id, posuere mattis felis. Sed non nunc vel sapien vehicula scelerisque consectetur at lectus. Nulla venenatis dui vel cursus fringilla. Morbi congue elementum elit, eget convallis sapien porttitor eu. Praesent et lorem lectus. Curabitur vel molestie nisl. Maecenas sed porttitor ex."			
@@ -42,6 +46,13 @@ const Home = () => {
 			/>
 
 			<Announcement
+				title="Example Announcement 6"
+				text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a viverra velit, vel porttitor mauris. Nulla volutpat varius turpis quis dictum. Nullam massa enim, mattis at justo id, posuere mattis felis. Sed non nunc vel sapien vehicula scelerisque consectetur at lectus. Nulla venenatis dui vel cursus fringilla. Morbi congue elementum elit, eget convallis sapien porttitor eu. Praesent et lorem lectus. Curabitur vel molestie nisl. Maecenas sed porttitor ex."			
+				timestamp="2020-12-23 23:12:32.4567"
+				userId="(the player formerly known as mousecop)"
+			/>
+			<h2>Event</h2>
+			<Event
 				title="Example Announcement 6"
 				text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a viverra velit, vel porttitor mauris. Nulla volutpat varius turpis quis dictum. Nullam massa enim, mattis at justo id, posuere mattis felis. Sed non nunc vel sapien vehicula scelerisque consectetur at lectus. Nulla venenatis dui vel cursus fringilla. Morbi congue elementum elit, eget convallis sapien porttitor eu. Praesent et lorem lectus. Curabitur vel molestie nisl. Maecenas sed porttitor ex."			
 				timestamp="2020-12-23 23:12:32.4567"

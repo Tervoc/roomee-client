@@ -2,6 +2,7 @@ import React from 'react'
 import { Redirect, Route } from 'react-router'
 import Layout from './components/Layout'
 import Home from './components/Home'
+import EventPage from './components/EventPage'
 import Login from './components/Login'
 import Signup from './components/Signup'
 
@@ -47,7 +48,7 @@ const App = () => {
 	return(
 		<React.Fragment>
 			<Layout>
-				<PrivateRoute exact path='/' component={Home} />
+				<Route exact path='/' component={EventPage} />
 				<Route path='/login' component={Login} />
 				<Route path='/signup' component={Signup} />
 								
