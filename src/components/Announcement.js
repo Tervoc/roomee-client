@@ -1,6 +1,7 @@
-import React from 'react'
-import Card from 'react-bootstrap/Card'
+import React from 'react';
+import { Card } from 'react-bootstrap';
 import format from 'date-fns/format'
+
 
 const Announcement = (props) => {
 	return(
@@ -14,7 +15,7 @@ const Announcement = (props) => {
 				</Card.Text>
 			</Card.Body>
 			<Card.Footer>
-				{`Posted: ${format(new Date(props.timestamp), 'MM/dd/yyyy \'at\' hh:mm a')} by `}
+				{`Posted on: ${format(new Date(props.timestamp), 'MM/dd/yyyy \'at\' hh:mm a')} by `}
 				<span style={{fontWeight: "500"}}>{props.userId}</span>
 			</Card.Footer>
 		</Card>
