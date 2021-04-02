@@ -4,6 +4,8 @@ import Layout from './components/Layout'
 import Home from './components/Home'
 import Login from './components/Login'
 import Signup from './components/Signup'
+import MyRoomees from './components/MyRoomees.js'
+
 
 import { toast, ToastContainer } from 'react-toastify'
 import { useCookies } from 'react-cookie'
@@ -47,9 +49,10 @@ const App = () => {
 	return(
 		<React.Fragment>
 			<Layout>
-				<PrivateRoute exact path='/' component={Home} />
+				<Route exact path='/' component={Home} />
 				<Route path='/login' component={Login} />
 				<Route path='/signup' component={Signup} />
+                <Route path='/myroomees' component={MyRoomees} /> 
 								
 			</Layout>
 

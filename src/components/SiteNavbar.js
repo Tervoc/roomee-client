@@ -29,9 +29,9 @@ const SiteNavbar = (props) => {
 						<Col className="nav-items">
 							<Nav.Link as={Link} to={'/'} style={{borderRight: '7px solid #44DDBF'}}><FontAwesomeIcon icon={faHome}/>&nbsp;Home</Nav.Link>
 							<Nav.Link as={Link} to={'/myroomees'}><FontAwesomeIcon icon={faUserFriends}/>&nbsp;My roomees</Nav.Link>
-							<Nav.Link as={Link} to={Home}><FontAwesomeIcon icon={faBullhorn}/>&nbsp;Announcements</Nav.Link>
-							<Nav.Link as={Link} to={Home}><FontAwesomeIcon icon={faClipboardList}/>&nbsp;Chores</Nav.Link>
-							<Nav.Link as={Link} to={Home}><FontAwesomeIcon icon={faCalendarAlt}/>&nbsp;Events</Nav.Link>
+							<Nav.Link as={Link} to={'/'}><FontAwesomeIcon icon={faBullhorn}/>&nbsp;Announcements</Nav.Link>
+							<Nav.Link as={Link} to={'/'}><FontAwesomeIcon icon={faClipboardList}/>&nbsp;Chores</Nav.Link>
+							<Nav.Link as={Link} to={'/'}><FontAwesomeIcon icon={faCalendarAlt}/>&nbsp;Events</Nav.Link>
 						</Col>
 					</Row>
 					<Row xs className="navbar-footer">
@@ -78,7 +78,7 @@ const SiteNavbar = (props) => {
 					</Col>
 				</Nav>
 			</Col>
-			<Col className="page-content" fluid>
+			<Col className="page-content" fluid="true">
 				{props.children}
 			</Col>
 		</Row>	
