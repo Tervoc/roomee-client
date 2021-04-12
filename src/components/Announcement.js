@@ -11,12 +11,12 @@ const Announcement = (props) => {
 					{props.title}
 				</Card.Title>
 				<Card.Text>
-					{props.text}
+					{props.body}
 				</Card.Text>
 			</Card.Body>
 			<Card.Footer>
 				{`Posted on: ${format(new Date(props.timestamp), 'MM/dd/yyyy \'at\' hh:mm a')} by `}
-				<span style={{fontWeight: "500"}}>{props.userId}</span>
+				<span style={{fontWeight: "500"}}>{`${props.user.lastName}, ${props.user.firstName}`}</span>
 			</Card.Footer>
 		</Card>
 	);

@@ -14,6 +14,7 @@ import Home from './Home'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 import Tooltip from 'react-bootstrap/Tooltip'
 import Alert from 'react-bootstrap/Alert'
+import Button from 'react-bootstrap/Button'
 
 const SiteNavbar = (props) => {
 
@@ -29,7 +30,7 @@ const SiteNavbar = (props) => {
 						<Col className="nav-items">
 							<Nav.Link as={Link} to={'/'} style={{borderRight: '7px solid #44DDBF'}}><FontAwesomeIcon icon={faHome}/>&nbsp;Home</Nav.Link>
 							<Nav.Link as={Link} to={'/myroomees'}><FontAwesomeIcon icon={faUserFriends}/>&nbsp;My roomees</Nav.Link>
-							<Nav.Link as={Link} to={'/'}><FontAwesomeIcon icon={faBullhorn}/>&nbsp;Announcements</Nav.Link>
+							<Nav.Link as={Link} to={'/announcements'}><FontAwesomeIcon icon={faBullhorn}/>&nbsp;Announcements</Nav.Link>
 							<Nav.Link as={Link} to={'/'}><FontAwesomeIcon icon={faClipboardList}/>&nbsp;Chores</Nav.Link>
 							<Nav.Link as={Link} to={'/'}><FontAwesomeIcon icon={faCalendarAlt}/>&nbsp;Events</Nav.Link>
 						</Col>
