@@ -1,0 +1,14 @@
+.daily-card{
+    /* background-color: rgb(22, 0, 224); */
+    background: #f04747;
+    
+}
+.weekly-card{
+    background: #44ddb4;
+}
+
+.monthly-card{
+    background: #7289da;
+}
+
+.page{background-color:#ffffff;}

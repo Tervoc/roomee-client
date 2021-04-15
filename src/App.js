@@ -6,6 +6,7 @@ import Login from './components/Login'
 import Signup from './components/Signup'
 import MyRoomees from './components/MyRoomees.js'
 import Announcements from './components/AnnouncementsPage.js'
+import Chores from './components/ChoresPage.js'
 
 
 import { toast, ToastContainer } from 'react-toastify'
@@ -50,11 +51,12 @@ const App = () => {
 	return(
 		<React.Fragment>
 			<Layout>
-				<PrivateRoute exact path='/' component={Home} />
-				<Route path='/login' component={Login} />
+				<Route exact path='/' component={Home} />
+				<Route path='/login' component={Home} />
 				<Route path='/signup' component={Signup} />
-                <PrivateRoute path='/myroomees' component={MyRoomees} /> 
-				<PrivateRoute path='/announcements' component={Announcements} />
+                <Route path='/myroomees' component={MyRoomees} /> 
+				<Route path='/announcements' component={Announcements} />
+                <Route path='/chores' component={Chores} />
 								
 			</Layout>
 
