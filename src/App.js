@@ -51,12 +51,12 @@ const App = () => {
 	return(
 		<React.Fragment>
 			<Layout>
-				<Route exact path='/' component={Home} />
-				<Route path='/login' component={Home} />
+				<PrivateRoute exact path='/' component={Home} />
+				<Route path='/login' component={Login} />
 				<Route path='/signup' component={Signup} />
-                <Route path='/myroomees' component={MyRoomees} /> 
-				<Route path='/announcements' component={Announcements} />
-                <Route path='/chores' component={Chores} />
+                <PrivateRoute path='/myroomees' component={MyRoomees} /> 
+				<PrivateRoute path='/announcements' component={Announcements} />
+                <PrivateRoute path='/chores' component={Chores} />
 								
 			</Layout>
 

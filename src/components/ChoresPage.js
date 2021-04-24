@@ -22,15 +22,24 @@ import InputGroup from 'react-bootstrap/InputGroup'
 
 const Chores = () => {
 	const [cookies] = useCookies();
-	const [chores, setChores] = useState([]);
+	const [dailyChores, setDailyChores] = useState([]);
+	const [weeklyChores, setWeeklyChores] = useState([]);
+	const [monthlyChores, setMonthlyChores] = useState([]);
     const [modalShow, setModalShow] = React.useState(false);
 	
 	useEffect(() => {
-		axios.get(Constants.APIRoot + 'chore', {
+		axios.get(Constants.APIRoot + 'chore/assignment/1' , {
 			headers: { token: cookies['roomee-token'] }
 		})
 		.then((response) => {
-			setChores(response.data);
+			var d = [];
+			for (var i = 0; i < response.data.length; i++) {
+				 if (response.data[i].choreFrequencyId == 1) {
+				  	d.push(response.data[i]);
+				 }
+			}	
+
+			setDailyChores(d);
 		})
 		.catch(() => {
 			toast.error('Could not load chores right now. Please try again later.');
@@ -71,32 +80,21 @@ const Chores = () => {
                                     </Row>
                                     
                                 </Card.Title>
-                                {/* <Card.Text></Card.Text> */}
-                                <Chore 
-                                    title="Take out Trash"
-                                    body="Its starting to smeel like someones fat uncle died"
-                                    timestamp="2020-12-23 23:12:32.4567"
-                                    user="Joe Mama"
-						        />
-                                <Chore 
-                                title="Mop Floor"
-                                body="Its starting to smeel like someones fat uncle died"
-                                timestamp="2020-12-23 23:12:32.4567"
-                                user="Joe Mama"
-                                />
-                                <Chore 
-                                    title="Mop Floor"
-                                    body="Its starting to smeel like someones fat uncle died"
-                                    timestamp="2020-12-23 23:12:32.4567"
-                                    user="Joe Mama"
-                                />
-                                <Chore 
-                                    title="Mop Floor"
-                                    body="Its starting to smeel like someones fat uncle died"
-                                    timestamp="2020-12-23 23:12:32.4567"
-                                    user="Joe Mama"
-                                />
-                            
+								{ 
+								dailyChores.length !== 0 ?
+									dailyChores.map((chore) =>
+										<Chore 
+											key={chore.choreId}
+											title={chore.name}
+											body={chore.description}
+										/>
+									)
+								:
+									<Alert variant={'info'}>
+										{'There are no new chores at this time.'}
+									</Alert>
+								}
+								
                             </Card.Body>
                         </Card>
                     </Col>
