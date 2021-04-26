@@ -3,12 +3,15 @@ import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
-import { CardFooter } from 'reactstrap';
+import { CardFooter } from 'reactstrap'
+import Alert from 'react-bootstrap/Alert'
 
 import Constants from '../Constants'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 import { useCookies } from 'react-cookie'
+import { Container } from 'react-bootstrap';
+
 
 const StatusCard = (props) => {
     const [cookies] = useCookies();
@@ -59,11 +62,14 @@ const StatusCard = (props) => {
     }, []);
 
     return (
-        <Card style={{ width: '18rem', backgroundColor: cardColor, margin: '10px'}}>
+        
+        <Card style={{ width: '100%', backgroundColor: 'lightGrey',  margin: 'auto', marginBottom: "10px"}}>
             <Card.Body>
                 <Card.Title>Status</Card.Title>
                 <Card.Text>
-                    {cardText}
+                    <Alert style={{backgroundColor: cardColor}}>
+                        {cardText}
+                    </Alert>
                 </Card.Text>
                 <DropdownButton id="dropdown-basic-button" title="Change Status" hidden={!props.allowChange}>
                     <Dropdown.Item variant="primary" onClick={Available}>Available</Dropdown.Item>
@@ -75,6 +81,7 @@ const StatusCard = (props) => {
                 {name}
             </CardFooter>
         </Card>
+        
     )
 }
 

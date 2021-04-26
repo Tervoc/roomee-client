@@ -31,7 +31,7 @@ const MyRoomees = () => {
             {
                 roomees.length !== 0 ?
                     roomees.map((roomee) => 
-                        <StatusCard key={roomee.userId} allowChange={roomee.userId == 1 ? true : false} status={roomee.userStatus} userId={roomee.userId} />
+                        <StatusCard key={roomee.userId} allowChange={roomee.userId == 1 ? true : false} status={roomee.userStatus} userId={roomee.userId} fluid/>
                     )
                 :
                 null

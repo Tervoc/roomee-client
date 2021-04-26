@@ -46,8 +46,6 @@ const Announcements = () => {
 						{'There are no new announcements at this time.'}
 					</Alert>
 				}
-				
-				
 			</SiteNavbar>
 	);
 }

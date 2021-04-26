@@ -49,22 +49,6 @@ const Chores = () => {
 	return (
 			<SiteNavbar>
 				<h2>Chores</h2>
-				{/* { 
-				chores.length !== 0 ?
-					chores.map((chore) =>
-						<Chore 
-							key={chore.chore.choretId}
-							title={chore.chore.title}
-							body={chore.chore.body}
-							timestamp={chore.chore.creationTimestamp}
-							user={chore.user}
-						/>
-					)
-				:
-					<Alert variant={'info'}>
-						{'There are no new chores at this time.'}
-					</Alert>
-				} */}
                 <Row style = {{marginTop: '10px'}}>
                     <Col>
                         <Card className="daily-card">
