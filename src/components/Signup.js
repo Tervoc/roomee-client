@@ -69,7 +69,7 @@ const Signup = () => {
 	return (
 		<div className="component-wrapper">
 			<div className="form-holder">
-				<Image src="resources/images/roomee.png" fluid/>
+				<Image src="resources/images/roomee-logo.png" fluid/>
 				<h1>roomee</h1>
 				<p><b>New Account</b></p>
 				<p>Already have an account? <Link to={'/login'}>Log in</Link></p>

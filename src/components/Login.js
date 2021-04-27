@@ -54,7 +54,7 @@ const Login = () => {
 	return (
 		<div className="component-wrapper">
 			<div className="login-form-holder">
-				<Image src="resources/images/roomee.png" fluid/>
+				<Image src="resources/images/roomee-logo.png" fluid/>
 				<h1>roomee</h1>
 
 				<Form noValidate validated={validated} onSubmit={handleSubmit}>
